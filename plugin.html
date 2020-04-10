@@ -1,62 +1,187 @@
-<!DOCTYPE html>
-
-<!--
-	author1:lym12321
-    time:2020-04-05
-
-    author2:Timolop233
-    time:2020-04-10
+<!doctype html>
+<!-- 
+    Author: Lym12321
+    @CopyRight TextWar Developing Studio
+    Made By Mdui.
 -->
-
 <html>
     <head>
-        <meta http-equiv="content-type" charset="UTF-8">
-        <title>Plugin[Maintain]</title>
-        <script src="js/cdn.js"></script>
-        <style>
-            @import "https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css";
-            @import "https://cdn.staticfile.org/ionicons/2.0.1/css/ionicons.min.css";
-        </style>
-        <link rel="stylesheet" href="css/style.css">
+        <title>TextWar</title>
+        <!-- 自适应 加上吧 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- 引入MDUI -->
+        <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
+        <script src="https://cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
     </head>
-    <body>
 
-    <!--Button event start-->
+    <body class="mdui-theme-primary-indigo mdui-drawer-body-left">    <!-- 主题色indigo -->
 
-    <div class="sidebar">
-        <ul>
-            <li><a class="ion-home" href="index.html"></a></li>
-            <li><a class="ion-navicon-round" href="#"></a></li>
-            <li><a class="ion-social-github" href="https://github.com/jackfrued/Python-100-Days"></a></li>
+        <div class="mdui-toolbar mdui-color-theme mdui-container">  <!-- 工具栏 -->
+            <!-- 工具栏左侧start -->
+            <button id="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></button>
+            <span>TextWar</span>
+            <!-- 工具栏左侧end -->
 
-        </ul>
-    </div>
-    <a class="btn"></a>
+            <div class="mdui-toolbar-spacer"></div>
 
-        <script type="text/javascript">
-            $('.btn').on('click',function () {
-                $('.btn').toggleClass('btnc');
-                $('.sidebar').toggleClass('side');
-           })
-        </script>
+            <!-- 工具栏右侧start -->
+            <a target="_blank" href="https://github.com/TextWar/TextWar/">
+                <svg t="1586481717281" class="icon mdui-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2164" width="30" height="30">
+                    <path d="M512 128C299.872 128 128 299.872 128 512c0 169.6 110.016 313.6 262.624 364.384 19.264 3.52 26.24-8.256 26.24-18.496 0-9.152-0.352-33.28-0.48-65.28-106.88 23.136-129.376-51.488-129.376-51.488-17.504-44.384-42.624-56.256-42.624-56.256-34.88-23.744 2.624-23.232 2.624-23.232 38.496 2.752 58.752 39.488 58.752 39.488 34.24 58.752 89.856 41.76 111.744 32 3.52-24.864 13.504-41.76 24.384-51.36-85.248-9.632-174.88-42.624-174.88-189.76 0-42.016 15.008-76.256 39.488-103.136-3.872-9.6-17.12-48.736 3.744-101.6 0 0 32.256-10.24 105.632 39.36A367.584 367.584 0 0 1 512 313.76c32.64 0.128 65.504 4.352 96.128 12.864 73.376-49.6 105.504-39.36 105.504-39.36 20.992 52.864 7.872 92 3.84 101.6 24.64 26.88 39.392 61.12 39.392 103.136 0 147.52-89.728 179.872-175.232 189.504 13.76 11.744 25.984 35.232 25.984 71.008 0 51.36-0.352 92.736-0.352 105.376 0 10.24 6.848 22.24 26.368 18.496C786.112 825.504 896 681.6 896 512c0-212.128-171.872-384-384-384z" p-id="2165" fill="#ffffff"></path>
+                </svg>
+            </a>
+            <!-- 工具栏右侧end -->
+        </div>
+        <div class="mdui-drawer mdui-drawer-full-height" id="drawer">   <!-- 抽屉 -->
+            <br>
+            <center><img width="150" height="50" src="https://s1.ax1x.com/2020/04/04/G07J9P.png"></center>
+            <ul class="mdui-list"><!--home按钮 lym编写代码-->
+                <a href="index.html">
+                    <li class="mdui-list-item mdui-ripple">
+                        <i class="mdui-list-item-icon icon mdui-icon material-icons">home</i>
+                        <div class="mdui-list-item-content">Home</div>
+                    </li>
+                </a>
+            </ul>
 
-        <!--Button event end-->
+            <ul class="mdui-list"><!--add按钮 lym编写代码-->
+                <a href="plugin.html">
+                    <li class="mdui-list-item mdui-ripple">
+                        <i class="mdui-list-item-icon icon mdui-icon material-icons">dehaze</i>
+                        <div class="mdui-list-item-content">Plugin</div>
+                    </li>
+                </a>
+            </ul>
 
-        <div id="wrapper">
-        
-            <!-- start header -->
-        
-               <div id="header">
-                  <div class="row">
-                        <div class="inner">
+            <ul class="mdui-list"><!--githun按钮 lym编写代码-->
+                <a href="https://github.com/TextWar/TextWar">    
+                    <li class="mdui-list-item mdui-ripple">
+                        <svg t="1586484398402" class="icon mdui-icon mdui-list-item-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2321" width="40" height="40">
+                            <path d="M512 128C299.872 128 128 299.872 128 512c0 169.6 110.016 313.6 262.624 364.384 19.264 3.52 26.24-8.256 26.24-18.496 0-9.152-0.352-33.28-0.48-65.28-106.88 23.136-129.376-51.488-129.376-51.488-17.504-44.384-42.624-56.256-42.624-56.256-34.88-23.744 2.624-23.232 2.624-23.232 38.496 2.752 58.752 39.488 58.752 39.488 34.24 58.752 89.856 41.76 111.744 32 3.52-24.864 13.504-41.76 24.384-51.36-85.248-9.632-174.88-42.624-174.88-189.76 0-42.016 15.008-76.256 39.488-103.136-3.872-9.6-17.12-48.736 3.744-101.6 0 0 32.256-10.24 105.632 39.36A367.584 367.584 0 0 1 512 313.76c32.64 0.128 65.504 4.352 96.128 12.864 73.376-49.6 105.504-39.36 105.504-39.36 20.992 52.864 7.872 92 3.84 101.6 24.64 26.88 39.392 61.12 39.392 103.136 0 147.52-89.728 179.872-175.232 189.504 13.76 11.744 25.984 35.232 25.984 71.008 0 51.36-0.352 92.736-0.352 105.376 0 10.24 6.848 22.24 26.368 18.496C786.112 825.504 896 681.6 896 512c0-212.128-171.872-384-384-384z" p-id="2322"></path>
+                        </svg>
+                        <div class="mdui-list-item-content">GitHub</div>
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <div class="mdui-container">    <!-- 布局容器 -->
+            <div class="mdui-card">
+                <div class="mdui-card-content">
+                    <center><img width="300" height="100" src="https://s1.ax1x.com/2020/04/04/G07J9P.png"></center>
+                    <!--GitHub medal-->
+                    <div align="center">
+                        <a href="https://github.com/TextWar/TextWar/network/members">
+                            <img src="https://img.shields.io/github/forks/TextWar/TextWar?style=social">
+                        </a>
+                        <a href="https://github.com/TextWar/TextWar/stargazers">
+                            <img src="https://img.shields.io/github/stars/TextWar/TextWar?style=social">
+                        </a>
+                    </div>
+                    <div align="center">
+                        <img src="https://img.shields.io/github/v/release/TextWar/TextWar?include_prereleases">
+                        <img src="https://img.shields.io/github/languages/code-size/TextWar/TextWar">
+                        <a href="https://github.com/TextWar/TextWar/issues">
+                            <img src="https://img.shields.io/github/issues/TextWar/TextWar">
+                        </a>
+                        <img src="https://coveralls.io/repos/github/TextWar/TextWar/badge.svg?branch=master">
+                        <a href="https://hits.dwyl.com/TextWar/TextWar">
+                            <img src="https://hits.dwyl.com/TextWar/TextWar.svg">
+                        </a>
+                     
+                        <a href="https://gitter.im/mytextwar/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)">
+                            <img src="https://badges.gitter.im/mytextwar/community.svg" >
+                        </a>
+                        <a href = "https://travis-ci.org/github/TextWar/TextWar/builds/671445536?utm_source=github_status&utm_medium=notification">
+                            <img src="https://travis-ci.org/TextWar/TextWar.svg?branch=master">
+                        </a>
+                        <a href="https://github.com/TextWar/TextWar/search?l=java">
+                            <img src="https://img.shields.io/github/languages/count/TextWar/TextWar">
+                        </a>
+                        <a href="https://github.com/TextWar/TextWar/blob/master/LICENSE">
+                            <img src="https://img.shields.io/badge/license-TPL-green">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Menu Panel -->
+            <div class="mdui-panel">
+                <div class="mdui-panel-item mdui-panel-item-open">
+                    <div class="mdui-panel-item-header">Plugin</div>
+                    <div class="mdui-panel-item-body">
+                        <div class="mdui-list mdui-list-dense">
                             <center>
-                                <h4>During plugin maintenance, I don't know the opening time, HAHAHA</h4>
-                                <h6>You can go back to the root page through home in the menu bar</h6>
-                                <h6>HaHaHa</h6>
+                                <h1>Logging.....</h1>
+                                <h3>In plugin maintenance, the estimated end time is about one year</h3>
+                                <h6>Maybe a year.......</h6>
+                                <!--time-->
+                                <h2><div id="timer"></div></h2>
                             </center>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Footer -->
+            <center><small>&copy;CopyRight TextWar Developing Studio</small></center>
+        </div>
+    </body>
+        <script language="javascript">
+            //抽屉
+            var inst = new mdui.Drawer('#drawer');
+            inst.close();
+            document.getElementById('menu').addEventListener('click', function () {
+                inst.toggle();
+            });
+
+            //time
+
+            var time_now_server,time_now_client,time_end,time_server_client;
+ 
+            time_end=new Date("2021/4/11 00:00:00");//结束的时间
+            time_end=time_end.getTime();//获取的是毫秒
+
+            time_now_server=new Date();//开始的时间
+            time_now_server=time_now_server.getTime();
+            setTimeout("show_time()",1000);
+
+            function show_time()
+            {
+                var timer = document.getElementById("timer");
+                var hourid = document.getElementById("hour");
+                if(!timer){
+                    return ;
+                }
+                timer.innerHTML =time_now_server;
+            
+                var time_now,time_distance,str_time;
+                var int_day,int_hour,int_minute,int_second;
+                var time_now=new Date();
+                time_now=time_now.getTime();
+                time_distance=time_end-time_now;
+                if(time_distance>0)
+                {
+                    int_day=Math.floor(time_distance/86400000)
+                    time_distance-=int_day*86400000;
+                    int_hour=Math.floor(time_distance/3600000)
+                    time_distance-=int_hour*3600000;
+                    int_minute=Math.floor(time_distance/60000)
+                    time_distance-=int_minute*60000;
+                    int_second=Math.floor(time_distance/1000)
+                
+                    if(int_hour < 10)
+                        int_hour="0"+int_hour;
+                    if(int_minute<10)
+                        int_minute="0"+int_minute;
+                    if(int_second<10)
+                        int_second="0"+int_second;
+                    str_time=int_day+"Day "+int_hour+"Hour "+int_minute+"Minute "+int_second+"Second ";
+                    timer.innerHTML=str_time;
+                    setTimeout("show_time()",1000);
+                }
+                else
+                {
+                    timer.innerHTML =0;
+                }
+            }
+        </script>
     </body>
 </html>
