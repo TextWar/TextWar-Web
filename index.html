@@ -12,14 +12,15 @@
         <!-- 引入MDUI -->
         <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
         <script src="https://cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
+        <script src="js/cdn.js"></script>
     </head>
 
     <body class="mdui-theme-primary-indigo mdui-drawer-body-left">    <!-- 主题色indigo -->
 
-        <div class="mdui-toolbar mdui-color-theme mdui-container">  <!-- 工具栏 -->
+        <div class="mdui-toolbar mdui-color-theme mdui-container-fluid">  <!-- 工具栏 -->
             <!-- 工具栏左侧start -->
             <button id="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></button>
-            <span>TextWar</span>
+            <a mdui-dialog="{target: '#dhk'}"><span>TextWar</span></a>
             <!-- 工具栏左侧end -->
 
             <div class="mdui-toolbar-spacer"></div>
@@ -53,6 +54,24 @@
                 </a>
             </ul>
 
+            <ul class="mdui-list">
+                <a href="https://github.com/TextWar/TextWar/wiki">
+                    <li class="mdui-list-item mdui-ripple">
+                        <i class="mdui-list-item-icon mdui-icon material-icons">book</i>
+                        <div class="mdui-list-item-content">Wiki</div>
+                    </li>
+                </a>
+            </ul>
+
+            <ul class="mdui-list">
+                <a href="about.html">
+                    <li class="mdui-list-item mdui-ripple">
+                        <i class="mdui-list-item-icon mdui-icon material-icons">info</i>
+                        <div class="mdui-list-item-content">About</div>
+                    </li>
+                </a>
+            </ul>
+
             <ul class="mdui-list"><!--githun按钮 lym编写代码-->
                 <a href="https://github.com/TextWar/TextWar">    
                     <li class="mdui-list-item mdui-ripple">
@@ -63,7 +82,16 @@
                     </li>
                 </a>
             </ul>
+
         </div>
+        <div class="mdui-dialog" id="dhk">   <!-- 对话框 -->
+            <div class="mdui-dialog-title">呐！这只是一个毫无卵用的对话框~</div>
+            <div class="mdui-dialog-content">好了，现在可以把我关掉了吧~(　o=^•ェ•)o</div>
+            <div class="mdui-dialog-actions">
+                <button class="mdui-btn mdui-ripple" mdui-dialog-close>OK</button>
+            </div>
+        </div>  
+
         <div class="mdui-container">    <!-- 布局容器 -->
             <div class="mdui-card">
                 <div class="mdui-card-content">
