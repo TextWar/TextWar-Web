@@ -1,18 +1,16 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <!-- 
-    >>About.html<<
     Author: Lym12321
     @CopyRight TextWar Developing Studio
     Made By Mdui.
 -->
 <html>
     <head>
-        <title>About-TextWar</title>
+        <title>TextWar</title>
         <!-- 自适应 加上吧 -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- 引入MDUI -->
         <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
-        <script src="https://cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
     </head>
 
     <body class="mdui-theme-primary-indigo mdui-drawer-body-left">    <!-- 主题色indigo -->
@@ -91,100 +89,62 @@
                 <button class="mdui-btn mdui-ripple" mdui-dialog-close>OK</button>
             </div>
         </div>  
-        <div class="mdui-container">    <!-- 布局容器 -->
-           
-            <!-- Menu Panel -->
-            <div class="mdui-panel mdui-panel-popout" mdui-panel>
-                <div class="mdui-panel-item mdui-panel-item-open">
-                    <div class="mdui-panel-item-header">介绍</div>
-                    <div class="mdui-panel-item-body">
-                        <center>
-                        <P>
-                            TextWar是一个用字符当作地图的RPC对战游戏。     
 
-                            它有很高的自由度。您可以在TextWar协议允许的范围内自由修改和自定义您的游戏。     
-                            
-                            并自动实现客户端和服务器扩展。     
-                            
-                            TextWar由TextWar核心、TextWar插件、TextWar协议、TextWar控制台、TextWar客户端连接器、TextWar映射生成器及其派生客户端组成。     
-                            
-                            TextWar提供了一个地图编辑器，您可以通过地图编辑器条目找到并下载它。
-                        </P><br><p>
-                            获取更多信息，请访问<a href="https://github.com/TextWar/TextWar/wiki">Wiki</a>
-                        </p>
-                        
-                        </center>
+        <div class="mdui-container">    <!-- 布局容器 -->
+            <div class="mdui-card">
+                <div class="mdui-card-content">
+                    <center><img width="300" height="100" src="https://s1.ax1x.com/2020/04/04/G07J9P.png"></center>
+                    <!--GitHub medal-->
+                    <div align="center">
+                        <a href="https://github.com/TextWar/TextWar/network/members">
+                            <img src="https://img.shields.io/github/forks/TextWar/TextWar?style=social">
+                        </a>
+                        <a href="https://github.com/TextWar/TextWar/stargazers">
+                            <img src="https://img.shields.io/github/stars/TextWar/TextWar?style=social">
+                        </a>
+                    </div>
+                    <div align="center">
+                        <img src="https://img.shields.io/github/v/release/TextWar/TextWar?include_prereleases">
+                        <img src="https://img.shields.io/github/languages/code-size/TextWar/TextWar">
+                        <a href="https://github.com/TextWar/TextWar/issues">
+                            <img src="https://img.shields.io/github/issues/TextWar/TextWar">
+                        </a>
+                        <img src="https://coveralls.io/repos/github/TextWar/TextWar/badge.svg?branch=master">
+                        <a href="https://hits.dwyl.com/TextWar/TextWar">
+                            <img src="https://hits.dwyl.com/TextWar/TextWar.svg">
+                        </a>
+                     
+                        <a href="https://gitter.im/mytextwar/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)">
+                            <img src="https://badges.gitter.im/mytextwar/community.svg" >
+                        </a>
+                        <a href = "https://travis-ci.org/github/TextWar/TextWar/builds/671445536?utm_source=github_status&utm_medium=notification">
+                            <img src="https://travis-ci.org/TextWar/TextWar.svg?branch=master">
+                        </a>
+                        <a href="https://github.com/TextWar/TextWar/search?l=java">
+                            <img src="https://img.shields.io/github/languages/count/TextWar/TextWar">
+                        </a>
+                        <a href="https://github.com/TextWar/TextWar/blob/master/LICENSE">
+                            <img src="https://img.shields.io/badge/license-TPL-green">
+                        </a>
                     </div>
                 </div>
-                <div class="mdui-panel-item">
-                    <div class="mdui-panel-item-header">项目结构</div>
+            </div>
+            <!-- Menu Panel -->
+            <div class="mdui-panel">
+                <div class="mdui-panel-item mdui-panel-item-open">
+                    <div class="mdui-panel-item-header">Team</div>
+                    
                     <div class="mdui-panel-item-body">
-                        <ul class="mdui-list">
-                            <a href="https://github.com/TextWar/TextWar-PHP-Client">
-                            <li class="mdui-list-item mdui-ripple">
-                                <div class="mdui-list-item-content">PHPTextWarClient</div>
-                            </li>
-                            </a>
-                            <a href="https://github.com/TextWar/TextWar-PythonPlugin">
-                                <li class="mdui-list-item mdui-ripple">
-                                    <div class="mdui-list-item-content">PythonPlugin</div>
-                                </li>
-                            </a>
-                            <a href="https://github.com/TextWar/Textwar-MapEditor">
-                                <li class="mdui-list-item mdui-ripple">
-                                    <div class="mdui-list-item-content">PythonTextWarMapEditor</div>
-                                </li>
-                            </a>
-                            <a href="https://github.com/TextWar/textwar-py">
-                                <li class="mdui-list-item mdui-ripple">
-                                    <div class="mdui-list-item-content">PythonTextWarMapGenerator</div>
-                                </li>
-                            </a>
-                            <a href="https://github.com/TextWar/TextWar/tree/master/textwar_pom">
-                                <li class="mdui-list-item mdui-ripple">
-                                    <div class="mdui-list-item-content">TextWarPom</div>
-                                </li>
-                            </a>
-                            <a href="https://github.com/TextWar/TextWar/tree/master/textwar">
-                                <li class="mdui-list-item mdui-ripple">
-                                    <div class="mdui-list-item-content">TextWarCore</div>
-                                </li>
-                            </a>
-                            <a href="https://github.com/TextWar/TextWar/tree/master/textwar_client_connector">
-                                <li class="mdui-list-item mdui-ripple">
-                                    <div class="mdui-list-item-content">TextWarClientConnector</div>
-                                </li>
-                            </a>
-                            <a href="https://github.com/TextWar/TextWar/tree/master/textwar_console">
-                                <li class="mdui-list-item mdui-ripple">
-                                    <div class="mdui-list-item-content">TextWarConsole</div>
-                                </li>
-                            </a>
-                            <a href="https://github.com/TextWar/TextWar/tree/master/textwar_plugin">
-                                <li class="mdui-list-item mdui-ripple">
-                                    <div class="mdui-list-item-content">TextWarPlugin</div>
-                                </li>
-                            </a>
-                            <a href="https://github.com/TextWar/TextWar/tree/master/textwar_protocol">
-                                <li class="mdui-list-item mdui-ripple">
-                                    <div class="mdui-list-item-content">TextWarProtocol</div>
-                                </li>
-                            </a>
-                            <a href="https://github.com/TextWar/TextWar/tree/master/textwar_qq_connector">
-                                <li class="mdui-list-item mdui-ripple">
-                                    <div class="mdui-list-item-content">TextWarQQConnector</div>
-                                </li>
-                            </a>
-                        </ul>
-                    </div>
-                </div>
-                <div class="mdui-panel-item">
-                    <div class="mdui-panel-item-header">项目进度</div>
-                    <div class="mdui-panel-item-body">
-                        <div class="mdui-progress">
-                            <!-- 20% -->
-                            <div class="mdui-progress-determinate" style="width: 20%;"></div>
+                        <div class="mdui-list mdui-list-dense">
+                            <a href="https://github.com/MagicLu550" class="mdui-list-item mdui-ripple">MagicLu550</a>
+                            <a href="https://github.com/GunVeda" class="mdui-list-item mdui-ripple">GunVeda</a>
+                            <a href="https://github.com/fafa-junhe" class="mdui-list-item mdui-ripple">fafa-junhe</a>
+                            <a href="https://github.com/YxMingY" class="mdui-list-item mdui-ripple">xMing</a>
+                            <a href="https://github.com/lym12321" class="mdui-list-item mdui-ripple">Lym12321</a>
+                            <a href="https://space.bilibili.com/340501282" class="mdui-list-item mdui-ripple">LaoWang</a>
+                            <a href="https://github.com/Timolop233" class="mdui-list-item mdui-ripple">Timolop233</a>
                         </div>
+                     
                     </div>
                 </div>
             </div>
@@ -201,8 +161,5 @@
         document.getElementById('menu').addEventListener('click', function () {
             inst.toggle();
         });
-        
-        
-        
     </script>
 </html>
