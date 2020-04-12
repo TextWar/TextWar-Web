@@ -1,13 +1,12 @@
 <!doctype html>
 <!-- 
-    >>About.html<<
     Author: Lym12321
     @CopyRight TextWar Developing Studio
     Made By Mdui.
 -->
 <html>
     <head>
-        <title>Plugin-TextWar</title>
+        <title>Maintain-TextWar</title>
         <!-- 自适应 加上吧 -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- 引入MDUI -->
@@ -46,7 +45,7 @@
             </ul>
 
             <ul class="mdui-list"><!--add按钮 lym编写代码-->
-                <a href="maintain.html">
+                <a href="plugin.html">
                     <li class="mdui-list-item mdui-ripple">
                         <i class="mdui-list-item-icon icon mdui-icon material-icons">dehaze</i>
                         <div class="mdui-list-item-content">Plugin</div>
@@ -55,7 +54,7 @@
             </ul>
 
             <ul class="mdui-list"><!--install-->
-                <a href="maintain.html">
+                <a href="about.html">
                     <li class="mdui-list-item mdui-ripple">
                         <i class="mdui-list-item-icon mdui-icon material-icons">add</i>
                         <div class="mdui-list-item-content">Install</div>
@@ -64,7 +63,7 @@
             </ul>
 
             <ul class="mdui-list"><!--news-->
-                <a href="maintain.html">
+                <a href="about.html">
                     <li class="mdui-list-item mdui-ripple">
                         <i class="mdui-list-item-icon mdui-icon material-icons">notifications</i>
                         <div class="mdui-list-item-content">News</div>
@@ -100,15 +99,15 @@
                     </li>
                 </a>
             </ul>
-        </div>
 
+        </div>
         <div class="mdui-dialog" id="dhk">   <!-- 对话框 -->
             <div class="mdui-dialog-title">呐！这只是一个毫无卵用的对话框~</div>
             <div class="mdui-dialog-content">好了，现在可以把我关掉了吧~(　o=^•ェ•)o</div>
             <div class="mdui-dialog-actions">
                 <button class="mdui-btn mdui-ripple" mdui-dialog-close>OK</button>
             </div>
-        </div>  
+        </div> 
 
         <div class="mdui-container">    <!-- 布局容器 -->
             <div class="mdui-card">
@@ -149,7 +148,85 @@
                     </div>
                 </div>
             </div>
+            <!-- Menu Panel -->
+            <div class="mdui-panel">
+                <div class="mdui-panel-item mdui-panel-item-open">
+                    <div class="mdui-panel-item-header">Plugin</div>
+                    <div class="mdui-panel-item-body">
+                        <div class="mdui-list mdui-list-dense">
+                            <center>
+                                <h1>Logging.....</h1>
+                                <h3>In plugin maintenance, the estimated end time is about one year</h3>
+                                <h6>Maybe a year.......</h6>
+                                <!--time-->
+                                <h2><div id="timer"></div></h2>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer -->
+            <center><small>&copy;CopyRight TextWar Developing Studio</small></center>
         </div>
+    </body>
+        <script language="javascript">
+            //抽屉
+            var inst = new mdui.Drawer('#drawer');
+            inst.close();
+            document.getElementById('menu').addEventListener('click', function () {
+                inst.toggle();
+            });
 
+            //time
+
+            var time_now_server,time_now_client,time_end,time_server_client;
+ 
+            time_end=new Date("2021/4/11 00:00:00");//结束的时间
+            time_end=time_end.getTime();//获取的是毫秒
+
+            time_now_server=new Date();//开始的时间
+            time_now_server=time_now_server.getTime();
+            setTimeout("show_time()",1000);
+
+            function show_time()
+            {
+                var timer = document.getElementById("timer");
+                var hourid = document.getElementById("hour");
+                if(!timer){
+                    return ;
+                }
+                timer.innerHTML =time_now_server;
+            
+                var time_now,time_distance,str_time;
+                var int_day,int_hour,int_minute,int_second;
+                var time_now=new Date();
+                time_now=time_now.getTime();
+                time_distance=time_end-time_now;
+                if(time_distance>0)
+                {
+                    int_day=Math.floor(time_distance/86400000)
+                    time_distance-=int_day*86400000;
+                    int_hour=Math.floor(time_distance/3600000)
+                    time_distance-=int_hour*3600000;
+                    int_minute=Math.floor(time_distance/60000)
+                    time_distance-=int_minute*60000;
+                    int_second=Math.floor(time_distance/1000)
+                
+                    if(int_hour < 10)
+                        int_hour="0"+int_hour;
+                    if(int_minute<10)
+                        int_minute="0"+int_minute;
+                    if(int_second<10)
+                        int_second="0"+int_second;
+                    str_time=int_day+"Day "+int_hour+"Hour "+int_minute+"Minute "+int_second+"Second ";
+                    timer.innerHTML=str_time;
+                    setTimeout("show_time()",1000);
+                }
+                else
+                {
+                    timer.innerHTML =0;
+                }
+            }
+        </script>
     </body>
 </html>
