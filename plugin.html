@@ -149,7 +149,16 @@
                     </div>
                 </div>
             </div>
+            <center><small>&copy;Copyright TextWar Developing Studio</small></center>
         </div>
+        <script language="javascript">
+            //抽屉
+            var inst = new mdui.Drawer('#drawer');
+            inst.close();
+            document.getElementById('menu').addEventListener('click', function () {
+                inst.toggle();
+            });
+        </script>
 
     </body>
 </html>
